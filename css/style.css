@@ -796,6 +796,10 @@ details + details {
         margin-bottom: 50px;
     }
 
+    .tour .title {
+        font-size: 60px;
+    }
+
 
      .tour .box {
         display: flex;
