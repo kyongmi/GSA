@@ -1,0 +1,872 @@
+@charset "UTF-8";
+
+/* 共通部分
+------------------------------- */
+html {
+    font-size: 100%;
+}
+body{
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    color: #3E3E3E;
+    margin: 0;
+    background-color: #ffff;
+}
+a {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    line-height: 0.85;
+    letter-spacing: -0.05em;
+    color: #3E3E3E;
+}
+
+a:hover {
+  opacity: 0.8; /* 好みに応じて調整（0〜1） */
+}
+
+img {
+    object-fit: fill;
+    object-position: center center;
+    width: 100%;
+}
+
+.logo{
+    object-fit: contain;
+}
+
+p{
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+
+.midasi {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 50px;
+}
+
+.title_box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title {
+    font-family: "Barlow Condensed", sans-serif;
+    font-size: 85px;
+    font-weight: 600;
+    color: #7490BE;
+}
+
+.maru {
+    height: 30px;
+    width: 30px;
+    background-color: #013467;
+    border-radius: 100px;
+}
+
+.kotitle {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #3E3E3E;
+    margin-bottom: 50px;
+}
+
+.text{
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    color: #3E3E3E;
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.n_text {
+    font-family: "Noto Sans JP", sans-serif;
+    font-weight: 500;
+    line-height: 1.65;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+}
+
+a {
+    text-decoration-color: none;  /*リンクの色を消す*/
+  }
+
+  html,body {
+    overflow-x: hidden;
+  }
+
+/*追従*/
+
+.form{
+    position: fixed;
+    z-index: 99999;
+    bottom: 50px;
+    right: 50px;
+    width: 350px;
+}
+
+.inner {
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.pc {
+    display: block;
+}
+
+.sp {
+    display: none;
+}
+
+/*画像の下の隙間を消すコード*/
+
+
+div{
+	text-align:center;
+}
+img{
+	vertical-align:top;
+}
+
+/* TOP----------------------------------------------------------------------------------- */
+
+.top_ga {
+    margin: 50px;
+}
+
+
+
+/* CTA----------------------------------------------------------------------------------- */
+
+.cta {
+    margin-bottom: 50px;
+}
+
+
+.cta .inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.cta .r {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 300px;
+}
+
+.cta .r img {
+    width: 232px;
+}
+
+
+
+.circle-button {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+
+/* 外側のSVGテキストを回転させる */
+.rotating-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 200px;
+  animation: spin 20s linear infinite;
+  z-index: 1;
+}
+
+/* 内側の小さめの円 */
+.inner-circle {
+  position: absolute;
+  top: 51%;
+  left: 50%;
+  width: 150px;
+  height: 150px;
+  background-color: #013467; /* ←好きな色に変更 */
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+/* 矢印（または任意のアイコン） */
+.arrow {
+     font-family: "Barlow Condensed", sans-serif;
+     font-weight: 100;
+    font-size: 24px;
+    color: white;
+}
+
+.cta .r .arrow img {
+    width: 30px;
+    height: auto;
+}
+
+/* 回転アニメーション */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+
+
+.cta .midasi {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 65px;
+    background: linear-gradient(to right, #A8C3D4, #7490BE); /* 左→右のグラデーション */
+  -webkit-background-clip: text;  /* テキストに背景をクリップする（Safari用） */
+  -webkit-text-fill-color: transparent; /* テキストの色を透明にする（Safari用） */
+  background-clip: text;          /* テキストに背景をクリップする（Chromeなど） */
+  color: transparent;             /* テキストの色を透明にする（全体対応） */
+}
+
+.cta .komidasi {
+    background: linear-gradient(to right, #A8C3D4, #7490BE); /* 左→右のグラデーション */
+  -webkit-background-clip: text;  /* テキストに背景をクリップする（Safari用） */
+  -webkit-text-fill-color: transparent; /* テキストの色を透明にする（Safari用） */
+  background-clip: text;          /* テキストに背景をクリップする（Chromeなど） */
+  color: transparent;             /* テキストの色を透明にする（全体対応） */
+  font-family: "Barlow Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+
+
+/* About Us----------------------------------------------------------------------------------- */
+
+.about_us {
+    padding: 50px 0;
+    width: 1240px;
+    background-color: #F3F3F3;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.about_us .komidasi {
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    color: #7490BE;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.about_us .n-midasi {
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about_us .l {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.about_us .r {
+    display: flex;
+    gap: 20px;
+}
+
+.about_us .midasi {
+    color: #7490BE;
+    margin-bottom: 20px;
+}
+
+.about_us .box2 {
+    background-color: #ffff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 50%;
+}
+
+.about_us .roma {
+    font-size: 14px;
+    color: #787878;
+    margin-bottom: 20px;
+}
+
+.about_us img {
+    border-radius: 10px;
+    width: 49%;
+    height: 335px;
+}
+
+
+
+
+
+
+/* Course----------------------------------------------------------------------------------- */
+
+.course img {
+    width: 1240px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+
+/* Introduction----------------------------------------------------------------------------------- */
+
+.introduction {
+    padding: 50px 0;
+    width: 1240px;
+    background-color: #F3F3F3;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+
+
+/* Achievements----------------------------------------------------------------------------------- */
+
+
+
+.achievements .box{
+    padding: 50px 50px;
+    width: 1240px;
+    background-color: #F3F3F3;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+
+.achievements .l {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.achievements .r {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+/* voices----------------------------------------------------------------------------------- */
+
+.voices {
+    margin-bottom: 50px;
+}
+
+/* tour----------------------------------------------------------------------------------- */
+
+.tour {
+    padding: 50px 0;
+    width: 1240px;
+    background-color: #F3F3F3;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.tour .box {
+    display: flex;
+    gap: 20px;
+}
+
+.tour .midasi {
+    font-family: "Noto Sans JP", sans-serif;
+    color: #ffff;
+    font-weight: 500;
+    background-color: #7490BE;
+    border-radius: 100px;
+    padding: 5px 20px;
+    width: fit-content;
+    margin-bottom: 20px;
+}
+
+.tour .r {
+    background-color: #ffff;
+    border: solid 3px #787878;
+    border-radius: 20px;
+    padding: 30px;
+    width: 50%;
+}
+
+.tour .box .img_box {
+    width: 50%;
+}
+
+.tour .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+/* FAQ----------------------------------------------------------------------------------- */
+
+.faq {
+    padding: 50px 0;
+    width: 1240px;
+    background-color: #F3F3F3;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.faq .box {
+    width: 100%;
+}
+
+.faq p {
+    line-height: 1.65;
+}
+
+/* リセットCSS */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* 外枠 */
+article {
+  margin: 20px auto;
+  padding: 20px;
+  width: 300px;
+  background-color: whitesmoke;
+}
+
+/* アコーディオン　見出し部分 */
+details > summary {
+  cursor: pointer;
+  padding: 20px 20px;
+  background-color: #A8C3D4;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* アコーディオン　見出し部分　オープン時 */
+details[open] > summary {
+  background-color: #A8C3D4;
+  border-bottom: none;
+  border-radius: 20px 20px 0 0;
+}
+
+/* アコーディオン　内容部分 */
+details > div {
+  padding: 20px;
+  background-color: white;
+}
+
+/* アコーディオン　内容部分　オープン時 */
+details[open] > div {
+  border-top-style: none;
+  border-radius: 0 0 20px 20px;
+  background-color: #ffff;
+  display: flex;
+  align-items: center;
+}
+
+/* アコーディオン　見出し部分　プラス・マイナスのマーク */
+details {
+  position: relative;
+}
+details > summary::after {
+  position: absolute;
+  content: '＋';
+  top: 44px;
+  right: 30px;
+}
+details[open] > summary::after {
+  content: '−';
+  top: 44px;
+  right: 30px;
+}
+
+/* アコーディオン　Safariの▲マークを消す */
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* アコーディオン間のスペース */
+details + details {
+  margin-top: 20px;
+  width: 100%;
+}
+
+
+.w-b{
+     font-family: "Barlow Condensed", sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    margin-right: 20px;
+    color: #ffff;
+}
+
+
+
+
+/* footer------------------------------- */
+
+.page_footer {
+    background-image: url(../images/20250529_1303.png);
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    margin: 50px;
+    border-radius: 30px;
+    height: 240px;
+    padding: 30px;
+
+}
+
+.page_footer img {
+    width: 50%;
+}
+
+.page_footer .text {
+    color: #ffff;
+}
+
+.page_footer .l {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page_footer .r {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.page_footer .r p {
+    font-size: 12px;
+    color: #ffff;
+}
+.page_footer .r a {
+    font-size: 12px;
+    color: #ffff;
+}
+
+
+/*モバイル版
+--------------------------------------------------------------------------モバイル版*/
+@media (max-width: 600px) {
+
+
+    .inner {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    .pc {
+        display: none;
+    }
+
+    .sp {
+        display: block;
+    }
+
+    .text {
+        font-size: 14px;
+    }
+
+    .midasi {
+        font-size: 25px;
+    }
+
+    .naname {
+        height: 50px;
+    }
+
+    .naname2 {
+        height: 50px;
+    }
+
+    .naname3 {
+        height: 50px;
+    }
+
+    .naname4 {
+        height: 50px;
+    }
+
+    .naname5 {
+        height: 50px;
+    }
+
+    .komidasi {
+        font-size: 25px;
+    }
+    
+
+    .top_ga {
+        margin: 10px 20px 20px 20px ;
+    }
+
+    .logo {
+        width: 180px;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+    .title {
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 75px;
+        font-weight: 600;
+        color: #7490BE;
+        text-align: center;
+        line-height: 0.8em;
+        margin-bottom: 30px;
+    }
+
+    .kotitle {
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        color: #3E3E3E;
+        margin-bottom: 50px;
+        text-align: center;
+    }
+
+    /* ヘッダー------------------------------- */
+
+    .pc_header {
+        display: none;
+    }
+
+
+    /* cta------------------------------- */
+
+    .cta {
+        margin-top: 50px;
+    }
+
+
+    .cta .midasi {
+        font-family: "Noto Sans JP", sans-serif;
+        font-size: 35px;
+        background: linear-gradient(to right, #A8C3D4, #7490BE);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        text-align: center;
+    }
+
+    .cta .komidasi {
+        background: linear-gradient(to right, #A8C3D4, #7490BE);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+        font-family: "Barlow Condensed", sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .cta .inner {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    /* about------------------------------- */
+
+
+    .about_us {
+        padding: 50px 0;
+        width: 90%;
+        background-color: #F3F3F3;
+        border-radius: 20px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    
+    .about_us .l {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 20px;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .about_us img {
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+    }
+
+    .about_us .r {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .about_us .box2 {
+        background-color: #ffff;
+        border-radius: 10px;
+        padding: 20px;
+        width: 100%;
+    }
+
+    /* course------------------------------- */
+
+
+    .course img {
+        width: 90%;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+    
+
+    /* introduction------------------------------- */
+
+    .introduction {
+        padding: 50px 0;
+        width: 90%;
+        background-color: #F3F3F3;
+        border-radius: 20px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    .introduction .title {
+        font-size: 52px;
+    }
+
+
+    /* achievements------------------------------- */
+
+
+    .achievements .box {
+        padding: 30px 20px;
+        width: 90%;
+        background-color: #F3F3F3;
+        border-radius: 20px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .achievements .title {
+        font-size: 60px;
+    }
+
+   
+    /* tour------------------------------- */
+
+    .tour {
+        padding: 50px 0;
+        width: 90%;
+        background-color: #F3F3F3;
+        border-radius: 20px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+
+     .tour .box {
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+
+    .tour .box .img_box {
+        width: 100%;
+    }
+
+    .tour .r {
+        background-color: #ffff;
+        border: solid 3px #787878;
+        border-radius: 20px;
+        padding: 20px;
+        width: 100%;
+    }
+
+
+    /* faq------------------------------- */
+
+
+    .faq {
+        padding: 50px 0;
+        width: 90%;
+        background-color: #F3F3F3;
+        border-radius: 20px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    details > summary::after {
+        display: none;
+    }
+
+    details > summary {
+        cursor: pointer;
+        padding: 10px 20px;
+        background-color: #A8C3D4;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+
+
+    /* footer------------------------------- */
+
+    .page_footer img {
+        width: 90%;
+    }
+
+    .page_footer {
+        background-image: url(../images/20250529_1310.png);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        margin: 20px;
+        height: 320px;
+    }
+
+    .page_footer .r {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        gap: 10px;
+    }
+
+}
