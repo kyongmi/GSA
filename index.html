@@ -413,7 +413,64 @@
 
     </div>
 
-    <div id="contact"></div>
+    <div id="contact">
+
+        <div class="inner">
+
+            <div class="title_box">
+                <div class="maru pc"></div>
+                <div class="title">Contact</div>
+            </div>
+            <p class="kotitle">お申し込み</p>
+
+            <form method="POST" action="https://hyperform.jp/api/odM9FVVi" class="contact-form">
+
+                <label>お子様のお名前：Child's Name<p class="h">必須</p></label>
+                <input type="text" name="お子様のお名前" required />
+
+                <label>お子様の生年月日：Child's Date of Birth<p class="h">必須</p></label>
+                <input type="date" name="お子様の生年月日" required />
+
+                <label>メールアドレス：Mail<p class="h">必須</p></label>
+                <input type="email" name="メールアドレス" required />
+
+                <label>お電話番号：Phone Number<p class="h">必須</p></label>
+                <input type="tel" name="お電話番号" required />
+
+                <fieldset>
+                <legend>プログラム：Program<p class="h">必須</p></legend>
+                <label><input type="checkbox" name="プログラム" value="Program A" /> メインプログラム  Preschool/Kindergarten</label>
+                <label><input type="checkbox" name="プログラム" value="Program B" />シーズンプログラム  Seasonal Programs</label>
+                <label><input type="checkbox" name="プログラム" value="Program C" />放課後プログラム  After School Program</label>
+                </fieldset>
+
+                <fieldset>
+                <legend>校舎：School building<p class="h">必須</p></legend>
+                <label><input type="checkbox" name="校舎" value="Tokyo" /> 立川校  Tachikawa School</label>
+                <label><input type="checkbox" name="校舎" value="Osaka" />世田谷深沢校  Setagaya Fukazawa School</label>
+                <label><input type="checkbox" name="校舎" value="Nagoya" />文京元町校  Bunkyo Motomachi School</label>
+                <label><input type="checkbox" name="校舎" value="Fukuoka" />幕張ベイパーク校  Makuhari Bay Park School</label>
+                </fieldset>
+
+                <label>
+                <input type="checkbox" name="資料請求" value="Yes" />
+                資料請求：Request
+                </label>
+
+                <label>ご要件：Inquiry</label>
+                <textarea name="ご要件" rows="4" placeholder=""></textarea>
+
+                <label class="privacy-policy">
+                <input type="checkbox" name="プライバシーポリシー" required />
+                プライバシーポリシーに同意する
+                </label>
+
+                <button type="submit">送信</button>
+            </form>
+            
+        </div>
+
+    </div>
 
 
 
